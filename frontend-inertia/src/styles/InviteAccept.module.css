@@ -1,0 +1,347 @@
+.container {
+  @apply min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 relative;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem; /* lg:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+.languageSwitcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .languageSwitcher {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.card {
+  max-width: 28rem; /* 448px - 招待ページは少し広め */
+  min-width: 24rem; /* 384px */
+  width: 100%;
+  border-radius: 0.75rem;
+  background-color: white;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -2px rgb(0 0 0 / 0.05);
+  transition: box-shadow 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.card:hover {
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 10px 10px -5px rgb(0 0 0 / 0.04);
+}
+
+.header {
+  background-color: #059669; /* emerald-600 - 招待らしい緑色 */
+  color: white;
+  padding: 2rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  z-index: 1;
+}
+
+.header > * {
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconSvg {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1rem; /* text-base */
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* エラー表示 */
+.errorContainer {
+  @apply flex items-center gap-3 bg-red-50 border border-red-200 rounded-lg p-4 m-6;
+}
+
+.errorIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #dc2626; /* red-600 */
+  flex-shrink: 0;
+}
+
+.errorMessage {
+  color: #dc2626; /* red-600 */
+  font-size: 0.875rem; /* text-sm */
+  margin: 0;
+}
+
+/* 招待情報表示 */
+.inviteInfo {
+  @apply p-6 bg-green-50 border border-green-200 rounded-lg m-6 space-y-4;
+}
+
+.infoItem {
+  @apply flex items-center gap-3;
+}
+
+.infoIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #059669; /* emerald-600 */
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  display: block;
+  font-size: 0.875rem; /* text-sm */
+  color: #6b7280; /* gray-500 */
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.infoValue {
+  display: block;
+  font-size: 0.875rem; /* text-sm */
+  color: #111827; /* gray-900 */
+  font-weight: 600;
+}
+
+/* フォーム */
+.form {
+  padding: 1.5rem;
+}
+
+.formGroup {
+  @apply mb-6;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3rem; /* pl-12 equivalent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.inputIconSvg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #6b7280; /* gray-500 */
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.5rem; /* rounded-md */
+  padding: 0.625rem 1rem 0.625rem 3rem; /* py-2.5 pr-4 pl-12 */
+  font-size: 0.875rem; /* text-sm */
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #059669; /* emerald-600 */
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1); /* emerald focus ring */
+}
+
+.inputError {
+  border-color: #dc2626; /* red-600 */
+}
+
+.inputError:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280; /* gray-500 */
+  transition: color 0.2s ease-in-out;
+}
+
+.passwordToggle:hover {
+  color: #374151; /* gray-700 */
+}
+
+.passwordToggleIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.fieldError {
+  margin-top: 0.5rem;
+  font-size: 0.875rem; /* text-sm */
+  color: #dc2626; /* red-600 */
+}
+
+.passwordHint {
+  margin-top: 0.5rem;
+  font-size: 0.75rem; /* text-xs */
+  color: #6b7280; /* gray-500 */
+}
+
+.submitButton {
+  @apply w-full bg-emerald-600 text-white font-medium py-3 px-4 rounded-md border-none cursor-pointer text-sm flex items-center justify-center gap-2;
+  transition: all 0.2s ease-in-out;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #047857; /* emerald-700 */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(5, 150, 105, 0.3);
+}
+
+.submitButton:disabled {
+  background-color: #9ca3af; /* gray-400 */
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.submitting {
+  background-color: #9ca3af; /* gray-400 */
+}
+
+/* ヘルプテキスト */
+.helpText {
+  @apply p-6 text-center;
+}
+
+.helpText p {
+  color: #6b7280; /* gray-500 */
+  font-size: 0.875rem; /* text-sm */
+  margin-bottom: 1rem;
+}
+
+.loginLink {
+  color: #059669; /* emerald-600 */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem; /* text-sm */
+  transition: color 0.2s ease-in-out;
+}
+
+.loginLink:hover {
+  color: #047857; /* emerald-700 */
+  text-decoration: underline;
+}
+
+/* フッター */
+.footer {
+  @apply p-6 border-t border-gray-100 text-center;
+}
+
+.secureText {
+  color: #6b7280; /* gray-500 */
+  font-size: 0.75rem; /* text-xs */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 640px) {
+  .card {
+    min-width: auto;
+    margin: 0 1rem;
+  }
+
+  .header {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem; /* text-2xl */
+  }
+
+  .inviteInfo,
+  .form,
+  .helpText,
+  .footer {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ウェルカムメール</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #047857;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 20px;
+            color: #1f2937;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .login-button {
+            display: inline-block;
+            background-color: #047857;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .login-button:hover {
+            background-color: #065f46;
+        }
+        .feature-list {
+            background-color: #f3f4f6;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .feature-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #047857;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">{{ app_name }}</div>
+            <h1 class="title">ようこそ！</h1>
+        </div>
+        
+        <div class="content">
+            <p>{{ user_name }} 様</p>
+            
+            <p>{{ app_name }} へのご登録ありがとうございます！</p>
+            <p>アカウントの作成が完了しました。以下の機能をご利用いただけます。</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">多言語対応インターフェース</div>
+                <div class="feature-item">セキュアなセッション管理</div>
+                <div class="feature-item">プロフィール管理機能</div>
+                <div class="feature-item">レスポンシブデザイン</div>
+            </div>
+            
+            <p>さっそくログインして、サービスをお楽しみください。</p>
+            
+            <div style="text-align: center;">
+                <a href="{{ login_url }}" class="login-button">ログインする</a>
+            </div>
+            
+            <p>ログインには以下の情報をご利用ください：</p>
+            <ul>
+                <li>メールアドレス: {{ user_email }}</li>
+                <li>パスワード: 登録時に設定されたパスワード</li>
+            </ul>
+            
+            <p>ご不明な点がございましたら、サポートまでお問い合わせください。</p>
+        </div>
+        
+        <div class="footer">
+            <p>このメールは自動送信されています。返信はできません。</p>
+            <p>&copy; {{ current_year }} {{ app_name }}. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

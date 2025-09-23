@@ -1,0 +1,299 @@
+{
+  "error_page": {
+    "title_suffix": "FastAPI App",
+    "error_code_label": "エラーコード",
+    "timestamp_label": "発生時刻",
+    "actions": {
+      "home": "ホームに戻る",
+      "back_instruction": "前のページに戻るには、ブラウザの戻るボタン（←）をご利用ください。"
+    }
+  },
+  "error_handler": {
+    "messages": {
+      "DATABASE_ERROR": "データベース接続に問題が発生しています。",
+      "VALIDATION_ERROR": "入力内容に不備があります。",
+      "BAD_REQUEST": "リクエストに問題があります。",
+      "UNAUTHORIZED": "認証が必要です。ログインしてください。",
+      "FORBIDDEN": "このページにアクセスする権限がありません。",
+      "NOT_FOUND": "お探しのページが見つかりません。",
+      "METHOD_NOT_ALLOWED": "このページでは使用できない操作です。",
+      "UNPROCESSABLE_ENTITY": "送信されたデータに問題があります。",
+      "INTERNAL_SERVER_ERROR": "サーバー内部でエラーが発生しました。",
+      "UNEXPECTED_ERROR": "予期しないエラーが発生しました。",
+      "default": "システムエラーが発生しました。"
+    }
+  },
+  "settings": {
+    "tabs": {
+      "account": "アカウント",
+      "security": "セキュリティ",
+      "preferences": "設定",
+      "language": "言語設定",
+      "api": "API"
+    },
+    "titles": {
+      "account_settings": "アカウント設定",
+      "security_settings": "セキュリティ設定",
+      "preferences_settings": "設定",
+      "language_settings": "言語設定",
+      "api_settings": "API設定"
+    },
+    "labels": {
+      "name": "名前",
+      "email": "メールアドレス",
+      "role": "役割",
+      "user_id": "ユーザーID",
+      "current_language": "現在の言語",
+      "timezone": "タイムゾーン",
+      "save": "保存",
+      "edit": "編集",
+      "cancel": "キャンセル",
+      "reset": "リセット",
+      "change": "変更",
+      "enable": "有効化",
+      "view": "表示"
+    },
+    "api": {
+      "api_key": "APIキー",
+      "access_permissions": "アクセス権限",
+      "permissions": {
+        "read": "読み取り権限",
+        "write": "書き込み権限",
+        "admin": "管理者権限"
+      },
+      "buttons": {
+        "view": "表示",
+        "copy": "コピー",
+        "regenerate": "再生成"
+      }
+    },
+    "security": {
+      "password_change": {
+        "title": "パスワード変更",
+        "description": "定期的にパスワードを変更することをお勧めします"
+      },
+      "two_factor": {
+        "title": "二段階認証",
+        "description": "アカウントのセキュリティを強化します"
+      },
+      "login_history": {
+        "title": "ログイン履歴",
+        "description": "最近のログイン活動を確認できます"
+      }
+    },
+    "notifications": {
+      "profile_updated": "プロフィールが更新されました",
+      "save_error": "保存中にエラーが発生しました",
+      "name_required": "名前を入力してください"
+    },
+    "breadcrumb": {
+      "dashboard": "ダッシュボード",
+      "settings": "設定"
+    },
+    "sidebar": {
+      "menu_title": "設定メニュー",
+      "account_settings": "アカウント設定",
+      "security_settings": "セキュリティ設定",
+      "preferences_settings": "基本設定",
+      "api_settings": "API設定"
+    }
+  },
+  "common": {
+    "home": "ホーム",
+    "back": "戻る",
+    "retry": "再試行",
+    "contact_support": "サポートに問い合わせ",
+    "errors": {
+      "api_error": "APIエラーが発生しました",
+      "network_error": "ネットワークエラーが発生しました",
+      "unknown_error": "不明なエラーが発生しました"
+    },
+    "loading": {
+      "default": "読み込み中...",
+      "saving": "保存中...",
+      "deleting": "削除中...",
+      "uploading": "アップロード中..."
+    }
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "greeting": "こんにちは、{{name}}さん",
+    "current_time": "現在時刻:",
+    "last_login": "最終ログイン:",
+    "no_login_record": "未記録",
+    "loading": "ユーザー情報を読み込み中...",
+    "stats": {
+      "user_info": "ユーザー情報",
+      "status": "ステータス",
+      "active": "アクティブ",
+      "session": "セッション",
+      "logged_in": "ログイン中",
+      "api_access": "API アクセス",
+      "available": "利用可能"
+    },
+    "user_card": {
+      "title": "ユーザー情報",
+      "labels": {
+        "name": "名前",
+        "email": "メール",
+        "role": "役割",
+        "id": "ID"
+      },
+      "edit_profile": "プロフィール編集"
+    },
+    "quick_actions": {
+      "title": "クイックアクション",
+      "api_docs": {
+        "title": "API ドキュメント",
+        "description": "Swagger UIでAPIを確認"
+      },
+      "settings": {
+        "title": "設定",
+        "description": "アカウント設定を変更"
+      },
+      "health_check": {
+        "title": "ヘルスチェック",
+        "description": "システム状態を確認"
+      }
+    }
+  },
+  "login": {
+    "title": "ログイン",
+    "subtitle": "アカウントにサインインしてください",
+    "form": {
+      "email": {
+        "label": "メールアドレス",
+        "placeholder": "your@email.com"
+      },
+      "password": {
+        "label": "パスワード",
+        "placeholder": "パスワードを入力"
+      },
+      "submit": "ログイン",
+      "submitting": "ログイン中..."
+    },
+    "errors": {
+      "default": "ログインに失敗しました"
+    },
+    "messages": {
+      "password_reset_success": "パスワードが正常にリセットされました。新しいパスワードでログインしてください。",
+      "invitation_accepted": "招待の受諾が完了しました。ログインしてください。"
+    },
+    "footer": {
+      "secure_connection": "セキュアな接続で保護されています"
+    },
+    "links": {
+      "forgot_password": "パスワードを忘れた方"
+    }
+  },
+  "navbar": {
+    "brand": {
+      "name": "FastAPI App"
+    },
+    "navigation": {
+      "dashboard": "ダッシュボード",
+      "settings": "設定"
+    },
+    "profile_menu": {
+      "profile": "プロフィール",
+      "settings": "設定",
+      "logout": "ログアウト"
+    },
+    "errors": {
+      "logout_failed": "ログアウトに失敗しました",
+      "logout_error": "ログアウトエラー:"
+    }
+  },
+  "layout": {
+    "footer": {
+      "copyright": "FastAPI App. All rights reserved."
+    }
+  },
+  "language_switcher": {
+    "changing": "切り替え中...",
+    "loading": "読み込み中..."
+  },
+  "invite": {
+    "title": "招待の受諾",
+    "subtitle_valid": "パスワードを設定してアカウントを有効化してください",
+    "subtitle_error": "招待情報を確認してください",
+    "invited_user": "招待されたユーザー",
+    "email": "メールアドレス",
+    "expires": "有効期限",
+    "expired": "期限切れ",
+    "expires_in_minutes": "あと{{minutes}}分",
+    "expires_in_hours": "あと{{hours}}時間",
+    "expires_in_hours_minutes": "あと{{hours}}時間{{minutes}}分",
+    "form": {
+      "password": {
+        "label": "パスワード",
+        "placeholder": "パスワードを入力してください",
+        "hint": "8文字以上の英数字を組み合わせてください"
+      },
+      "submit": "アカウントを有効化",
+      "submitting": "処理中..."
+    },
+    "help_text": "招待リンクが無効または期限切れです。招待者に新しいリンクの発行を依頼してください。",
+    "back_to_login": "ログインページに戻る",
+    "errors": {
+      "token_not_provided": "招待トークンが指定されていません。",
+      "invalid_token": "無効な招待トークンです。",
+      "verification_failed": "招待トークンの検証中にエラーが発生しました。",
+      "accept_failed": "招待の受諾に失敗しました。",
+      "unexpected_error": "エラーが発生しました"
+    }
+  },
+  "password_reset": {
+    "forgot_password": {
+      "title": "パスワードを忘れた方",
+      "subtitle": "登録されているメールアドレスを入力してください",
+      "description": "パスワードリセット用のリンクをメールでお送りします。",
+      "form": {
+        "email": {
+          "label": "メールアドレス",
+          "placeholder": "メールアドレスを入力"
+        },
+        "submit": "リセットメールを送信"
+      },
+      "success": "パスワードリセット用のメールを送信しました。メールをご確認ください。",
+      "back_to_login": "ログインページに戻る"
+    },
+    "reset_password": {
+      "title": "パスワードリセット",
+      "subtitle": "新しいパスワードを設定してください",
+      "description": "メールに記載されたリセットコードと新しいパスワードを入力してください。",
+      "form": {
+        "reset_code": {
+          "label": "リセットコード",
+          "placeholder": "メールに記載された6桁のコード"
+        },
+        "new_password": {
+          "label": "新しいパスワード",
+          "placeholder": "新しいパスワードを入力",
+          "hint": "8文字以上で入力してください"
+        },
+        "confirm_password": {
+          "label": "パスワード確認",
+          "placeholder": "パスワードを再入力"
+        },
+        "submit": "パスワードをリセット"
+      },
+      "success": "パスワードが正常にリセットされました。新しいパスワードでログインしてください。",
+      "back_to_login": "ログインページに戻る"
+    },
+    "errors": {
+      "email_required": "メールアドレスを入力してください。",
+      "email_invalid": "有効なメールアドレスを入力してください。",
+      "reset_code_required": "リセットコードを入力してください。",
+      "reset_code_invalid": "リセットコードが正しくありません。",
+      "password_required": "パスワードを入力してください。",
+      "password_too_short": "パスワードは8文字以上で入力してください。",
+      "password_mismatch": "パスワードが一致しません。",
+      "token_expired": "リセットトークンの有効期限が切れています。",
+      "token_invalid": "無効なリセットトークンです。",
+      "user_not_found": "指定されたメールアドレスのユーザーが見つかりません。",
+      "reset_failed": "パスワードリセットに失敗しました。",
+      "send_failed": "メール送信に失敗しました。"
+    }
+  }
+}

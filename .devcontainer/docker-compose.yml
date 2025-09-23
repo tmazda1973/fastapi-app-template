@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace:cached
+      - /workspace/frontend-inertia/node_modules  # Prevent host node_modules from overriding containers
+    ports:
+      - "8000:8000"
+    command: sleep infinity
+    environment:
+      - PYTHONPATH=/workspace
+      - DATABASE_URL=postgresql://postgres:postgres@app-db:5432/postgres
+    depends_on:
+      - app-db
+    networks:
+      - app-network
+
+  app-db:
+    image: postgres:17
+    restart: unless-stopped
+    volumes:
+      - app-db-store:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  app-db-store:

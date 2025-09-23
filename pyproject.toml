@@ -1,0 +1,101 @@
+[tool.poetry]
+name = "fastapi-app"
+version = "0.1.0"
+description = ""
+authors = ["author <support@sample.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.12"
+uvicorn = ">=0.32.0"
+pydantic = "^2.5.3"
+sqlalchemy = "^2.0.24"
+alembic = "^1.13.1"
+sqlmodel = "^0.0.24"
+passlib = "^1.7.4"
+python-jose = "^3.4.0"
+pandas = "^2.2.2"
+openpyxl = "^3.1.5"
+requests = "^2.32.4"
+psycopg2 = "^2.9.9"
+jwt = "^1.3.1"
+fastapi-mail = "^1.4.2"
+email-validator = "^2.2.0"
+rdkit = "^2024.9.5"
+accessify = "^0.3.1"
+mysql-connector-python = "^9.3.0"
+sqlalchemy-utils = "^0.41.2"
+urllib3 = "^2.5.0"
+itsdangerous = "^2.1.2"
+fastapi-inertia = "^1.1.0"
+jinja2 = "^3.1.6"
+bcrypt = "^4.3.0"
+typer = ">=0.12.0"
+rich = ">=13.9.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.0"
+black = "^25.1.0"
+ruff = "^0.6.3"
+sqlalchemy = {extras = ["mypy"], version = "^2.0.41"}
+pytest = "^8.4.0"
+pytest-mock = "^3.14.1"
+pytest-env = "^1.1.5"
+pytest-cov = "^6.2.1"
+pytest-asyncio = "^1.0.0"
+pytest-xdist = "^3.7.0"
+mypy = "^1.16.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+extend-exclude = '''
+(
+  /alembic
+)
+'''
+
+[tool.ruff]
+line-length = 88
+exclude = ["alembic"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "W", "I"]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
+preview = true
+
+[tool.pydocstyle]
+convention = "pep257"
+add-ignore = ["D417"]
+match = "(?!test_).*\\.py"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-v"
+testpaths = [
+    "app/tests",
+]
+env = [
+    "ENVIRONMENT=TEST",
+    "DB_HOST=admin-db",
+    "DB_DATABASE=postgres_test",
+    "DB_PORT=5438",
+    "READ_DB_HOST=admin-db",
+    "READ_DB_DATABASE=postgres_test",
+    "READ_DB_PORT=5438",
+]
+asyncio_default_fixture_loop_scope = "function"

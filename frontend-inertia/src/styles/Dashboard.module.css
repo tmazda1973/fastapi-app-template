@@ -1,0 +1,557 @@
+/* Dashboard CSS Module */
+
+/* メインコンテナ */
+.container {
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  max-width: none;
+}
+
+/* ヘッダーセクション */
+.header {
+  margin-bottom: 2rem;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  display: flex;
+  align-items: center;
+}
+
+.titleIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #2563eb;
+  margin-right: 0.75rem;
+}
+
+.subtitle {
+  color: #4b5563;
+  margin-top: 0.25rem;
+}
+
+.timeInfo {
+  text-align: right;
+}
+
+.timeText {
+  font-size: 0.875rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+}
+
+.timeIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.timeLabel {
+  display: inline-block;
+  width: 6.5rem;
+  text-align: left;
+}
+
+/* 統計カードグリッド */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.statCard {
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+  border-left-width: 4px;
+}
+
+.statCard:hover {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.statCardBody {
+  padding: 1.5rem;
+}
+
+.statCardContent {
+  display: flex;
+  align-items: center;
+}
+
+.statCardText {
+  flex-grow: 1;
+}
+
+.statCardTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.25rem;
+}
+
+.statCardValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.statCardIcon {
+  flex-shrink: 0;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.statIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* メインコンテンツグリッド */
+.mainGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+  }
+}
+
+/* カード */
+.card {
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  border-bottom: 1px solid #f3f4f6;
+  padding: 1.5rem;
+}
+
+.cardBody {
+  padding: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+}
+
+.cardTitleIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #2563eb;
+}
+
+/* ユーザー情報 */
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .userInfo {
+    flex-direction: row;
+    align-items: start;
+    gap: 1.5rem;
+  }
+}
+
+.userAvatar {
+  flex-shrink: 0;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .userAvatar {
+    align-self: flex-start;
+  }
+}
+
+.userAvatarCircle {
+  width: 5rem;
+  height: 5rem;
+  background-color: #dbeafe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #e5e7eb;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .userAvatarCircle {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.userAvatarCircle:hover {
+  border-color: #bfdbfe;
+  background-color: #eff6ff;
+  transform: scale(1.05);
+}
+
+.userAvatarIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #2563eb;
+}
+
+@media (min-width: 768px) {
+  .userAvatarIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.userDetails {
+  flex-grow: 1;
+}
+
+.userPropertiesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .userPropertiesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .userPropertiesGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .userPropertiesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.userPropertyBox {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  transition: all 0.2s ease-in-out;
+}
+
+.userPropertyBox:hover {
+  border-color: #d1d5db;
+  background-color: #f3f4f6;
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 1px 2px -1px rgba(0, 0, 0, 0.06);
+}
+
+.userPropertyHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.userPropertyIcon {
+  width: 1rem;
+  height: 1rem;
+  color: #6b7280;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.userPropertyLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.userPropertyValue {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+  word-break: break-word;
+}
+
+.userPropertyBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.userPropertyId {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e5e7eb;
+  display: inline-block;
+}
+
+.userActions {
+  margin-top: 1.5rem;
+}
+
+.editButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #059669;
+  color: white;
+}
+
+.editButton:hover {
+  background-color: #047857;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.editButton:focus {
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.editButtonIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+/* クイックアクション */
+.actionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.actionItem:hover {
+  border-color: #93c5fd;
+  background-color: #eff6ff;
+}
+
+.actionIcon {
+  flex-shrink: 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.actionItem:hover .actionIcon {
+  transform: scale(1.1);
+}
+
+.actionIconInner {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.actionContent {
+  margin-left: 1rem;
+  flex: 1;
+  min-width: 0; /* Flexboxの内容がはみ出すのを防ぐ */
+}
+
+.actionTitle {
+  font-weight: 600;
+  color: #111827;
+  transition: color 0.2s;
+}
+
+.actionItem:hover .actionTitle {
+  color: #2563eb;
+}
+
+.actionDescription {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.actionArrow {
+  flex-shrink: 0;
+}
+
+.actionArrowIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+
+.actionItem:hover .actionArrowIcon {
+  color: #2563eb;
+}
+
+/* ローディング */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.loadingContent {
+  text-align: center;
+}
+
+.loadingSpinner {
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  border-top-color: #059669;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+}
+
+.loadingText {
+  color: #4b5563;
+}
+
+/* カラーバリエーション */
+.blue {
+  color: #2563eb;
+}
+
+.bgBlue {
+  background-color: #eff6ff;
+}
+
+.borderBlue {
+  border-color: #bfdbfe;
+}
+
+.green {
+  color: #059669;
+}
+
+.bgGreen {
+  background-color: #ecfdf5;
+}
+
+.borderGreen {
+  border-color: #bbf7d0;
+}
+
+.indigo {
+  color: #4f46e5;
+}
+
+.bgIndigo {
+  background-color: #eef2ff;
+}
+
+.borderIndigo {
+  border-color: #c7d2fe;
+}
+
+.purple {
+  color: #7c3aed;
+}
+
+.bgPurple {
+  background-color: #faf5ff;
+}
+
+.borderPurple {
+  border-color: #e9d5ff;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

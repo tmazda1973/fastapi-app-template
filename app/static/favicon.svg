@@ -1,0 +1,27 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="32" height="32" rx="6" ry="6" fill="url(#primaryGrad)"/>
+  
+  <!-- メインアイコン：モダンなF字 -->
+  <path d="M8 6 L24 6 L24 10 L12 10 L12 14 L20 14 L20 18 L12 18 L12 26 L8 26 Z" fill="#ffffff"/>
+  
+  <!-- アクセント：小さな円 -->
+  <circle cx="26" cy="6" r="3" fill="url(#accentGrad)"/>
+  <circle cx="6" cy="26" r="2" fill="url(#accentGrad)" opacity="0.8"/>
+  
+  <!-- 小さなドット装飾 -->
+  <circle cx="22" cy="24" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="26" cy="20" r="1" fill="#ffffff" opacity="0.6"/>
+</svg>

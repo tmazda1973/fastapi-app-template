@@ -1,0 +1,20 @@
+{
+  "required": "This field is required",
+  "field_required": "{field} is required",
+  "min_length": "{field} must be at least {min} characters long",
+  "max_length": "{field} must be {max} characters or less",
+  "min_length_simple": "{field} must be at least {min} characters",
+  "max_length_simple": "{field} must be {max} characters or less",
+  "pattern": "Password must contain both letters and numbers",
+  "mismatch": "Passwords do not match",
+  "complexity": "Password must contain uppercase letters, lowercase letters, and numbers",
+  "invite": {
+    "token_required": "Invitation token is required"
+  },
+  "fields": {
+    "name": "Name",
+    "email": "Email address",
+    "password": "Password",
+    "reset_code": "Reset code"
+  }
+}
