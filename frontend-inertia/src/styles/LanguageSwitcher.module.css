@@ -1,0 +1,118 @@
+/* Language Switcher CSS Module */
+
+.languageSwitcher {
+  @apply relative inline-block;
+}
+
+.toggleButton {
+  @apply flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm;
+  @apply hover:bg-gray-50 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400;
+  @apply transition-colors duration-200;
+}
+
+.toggleButton.compact {
+  @apply p-2;
+}
+
+.toggleButton.changing {
+  @apply opacity-75 cursor-not-allowed;
+}
+
+.icon {
+  @apply w-4 h-4 text-emerald-600 transition-transform duration-200;
+}
+
+.icon.spinning {
+  animation: spin 1s linear infinite;
+}
+
+.currentLanguage {
+  @apply ml-2 text-gray-900;
+}
+
+.chevron {
+  @apply w-4 h-4 ml-2 text-emerald-600 transition-transform duration-200;
+}
+
+.chevronOpen {
+  @apply transform rotate-180;
+}
+
+.overlay {
+  @apply fixed inset-0 z-10;
+}
+
+.dropdown {
+  @apply absolute right-0 z-20 mt-2 w-48 bg-white border border-emerald-200 rounded-md shadow-lg;
+  @apply ring-1 ring-emerald-300 ring-opacity-20 focus:outline-none;
+}
+
+.dropdownItem {
+  @apply flex items-center justify-between w-full px-4 py-2 text-sm text-gray-900;
+  @apply hover:bg-emerald-50 hover:text-gray-900 focus:bg-emerald-50 focus:text-gray-900;
+  @apply transition-colors duration-150;
+}
+
+.dropdownItem:first-child {
+  @apply rounded-t-md;
+}
+
+.dropdownItem:last-child {
+  @apply rounded-b-md;
+}
+
+.dropdownItem.active {
+  @apply bg-emerald-50 text-gray-900;
+}
+
+.languageName {
+  @apply font-medium;
+}
+
+.checkmark {
+  @apply text-emerald-600 font-bold;
+}
+
+/* ダークモード対応を無効化 - 常にライトモード */
+/* @media (prefers-color-scheme: dark) {
+  .toggleButton {
+    @apply bg-gray-800 border-emerald-600 text-emerald-300;
+    @apply hover:bg-emerald-900;
+  }
+
+  .icon {
+    @apply text-emerald-300;
+  }
+
+  .currentLanguage {
+    @apply text-emerald-200;
+  }
+
+  .chevron {
+    @apply text-emerald-300;
+  }
+
+  .dropdown {
+    @apply bg-gray-800 border-emerald-600;
+    @apply ring-emerald-400 ring-opacity-20;
+  }
+
+  .dropdownItem {
+    @apply text-emerald-300;
+    @apply hover:bg-emerald-900 hover:text-emerald-200;
+  }
+
+  .dropdownItem.active {
+    @apply bg-emerald-900 text-emerald-200;
+  }
+} */
+
+/* アニメーション */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

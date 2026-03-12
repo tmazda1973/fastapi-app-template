@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "FastAPI App" }}</title>
+
+    <!-- ベースURL設定（内部IP問題対策） -->
+    {% if frontend_url %}
+    <base href="{{ frontend_url }}/" />
+    {% endif %}
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/static/favicon.svg"
+    >
+    <link
+      rel="manifest"
+      href="/static/site.webmanifest"
+    >
+    
+    <!-- Standard Inertia Head -->
+    {% inertia_head %}
+</head>
+<body>
+    <!-- Standard Inertia Body -->
+    {% inertia_body %}
+</body>
+</html>

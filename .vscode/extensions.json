@@ -1,0 +1,28 @@
+{
+  "recommendations": [
+    // Python開発
+    "ms-python.python",
+    "charliermarsh.ruff",
+
+    // TypeScript/React開発
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+
+    // その他便利な拡張機能
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    "ms-vscode-remote.remote-containers",
+    "editorconfig.editorconfig",
+    "ms-vscode.vscode-css-peek",
+    "christian-kohler.path-intellisense"
+  ],
+  "unwantedRecommendations": [
+    // 競合する可能性のある拡張機能
+    "ms-python.flake8",
+    "ms-python.pylint",
+    "ms-python.black-formatter",
+    // 無効化したい拡張機能
+    "ms-python.pylance"
+  ]
+}

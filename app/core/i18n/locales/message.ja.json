@@ -1,0 +1,55 @@
+{
+  "errors": {
+    "common": {
+      "not_found": "リソースが見つかりません",
+      "unauthorized": "認証されていません",
+      "forbidden": "アクセスが禁止されています",
+      "internal_server_error": "サーバーエラーが発生しました",
+      "bad_request": "不正なリクエストです",
+      "validation_error": "入力の検証に失敗しました"
+    },
+    "user": {
+      "login_failed": "ログインに失敗しました",
+      "not_found": "ユーザーが見つかりません",
+      "email_already_exists": "このメールアドレスはすでに使用されています",
+      "email_not_found": "メールアドレスが見つかりません",
+      "invalid_credentials": "メールアドレスまたはパスワードが間違っています",
+      "password_too_short": "パスワードは少なくとも8文字以上でなければなりません",
+      "password_not_match": "パスワードが一致しません",
+      "account_disabled": "アカウントが無効です",
+      "unverified": "ユーザーアカウントが未認証です",
+      "not_have_invite_permission": "ユーザーを招待する権限がありません",
+      "cannot_be_invited": "このユーザーは招待できません",
+      "register_failed": "ユーザー登録に失敗しました"
+    },
+    "password": {
+      "change_failed": "パスワードの変更に失敗しました",
+      "reset_process_failed": "パスワードリセットの処理に失敗しました",
+      "reset_failed": "パスワードのリセットに失敗しました"
+    },
+    "invite": {
+      "send_failed": "招待の送信に失敗しました",
+      "token_invalid": "無効な招待トークンです",
+      "token_expired": "招待トークンの有効期限が切れています",
+      "token_mismatch": "招待トークンが一致しません",
+      "user_not_found": "招待されたユーザーが見つかりません",
+      "user_already_verified": "このユーザーは既に認証済みです",
+      "token_verification_failed": "招待トークンの検証に失敗しました",
+      "accept_failed": "招待の受諾に失敗しました"
+    }
+  },
+  "success": {
+    "user": {
+      "register_success": "ユーザー登録が完了しました"
+    },
+    "password": {
+      "change_success": "パスワードが正常に変更されました",
+      "reset_email_sent": "パスワードリセット用のメールを送信しました。メールをご確認ください。",
+      "reset_success": "パスワードが正常にリセットされました"
+    },
+    "invite": {
+      "send_success": "招待メールを送信しました。メールをご確認ください。",
+      "accept_success": "招待を受諾しました。アカウントが有効化されました。"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+/* ====================================================================================================
+   Layout Module CSS
+   ====================================================================================================
+   
+   レイアウト全体のコンテナとメインコンテンツ領域のスタイル定義
+   Tailwind CSS と組み合わせて使用し、レスポンシブデザインをサポート
+   ==================================================================================================== */
+
+/* ベースレイアウトコンテナ */
+.layout {
+  height: 100vh;
+  background-color: #f9fafb !important; /* gray-50 */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* メインコンテンツエリア */
+.main {
+  @apply relative;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 4rem; /* フッター分のパディング */
+}
+
+/* ナビバーありの場合のメインコンテンツ */
+.mainWithNavbar {
+  @apply pt-0;
+}
+
+/* ナビバーなしの場合のメインコンテンツ */
+.mainWithoutNavbar {
+  @apply pt-8;
+}
+
+/* コンテンツコンテナ */
+.content {
+  @apply w-full px-4 sm:px-6 lg:px-8 py-8;
+  max-width: none;
+}
+
+/* ナビバーなしの場合のコンテンツ（パディング調整） */
+.contentWithoutNavbar {
+  @apply p-0;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 640px) {
+  .content {
+    @apply px-3 py-4;
+  }
+
+  .mainWithNavbar {
+    @apply pt-0;
+  }
+}
+
+/* ダークモード対応を無効化 - 常にライトモード */
+/* @media (prefers-color-scheme: dark) {
+  .layout {
+    @apply bg-gray-900;
+  }
+} */
+
+/* アニメーション効果 */
+.layout {
+  transition: background-color 0.3s ease;
+}
+
+.main {
+  transition: padding 0.3s ease;
+}
+
+/* アクセシビリティ改善 - フォーカスアウトライン無効化 */
+.main:focus-within {
+  outline: none;
+}
+
+/* プリント対応 */
+@media print {
+  .layout {
+    @apply bg-white;
+    min-height: auto;
+  }
+
+  .main {
+    min-height: auto;
+  }
+
+  .content {
+    @apply max-w-none p-0;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+/* フッター */
+.footer {
+  @apply bg-white text-center text-gray-600 py-3 border-t border-gray-200;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.footerContent {
+  @apply max-w-7xl mx-auto px-4;
+}

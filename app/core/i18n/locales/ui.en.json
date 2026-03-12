@@ -1,0 +1,295 @@
+{
+  "error_page": {
+    "title_suffix": "FastAPI App",
+    "error_code_label": "Error Code",
+    "timestamp_label": "Timestamp",
+    "actions": {
+      "home": "Back to Home",
+      "back_instruction": "To go back to the previous page, please use your browser's back button (←)."
+    }
+  },
+  "error_handler": {
+    "messages": {
+      "DATABASE_ERROR": "There is a problem with the database connection.",
+      "VALIDATION_ERROR": "There are issues with the input content.",
+      "BAD_REQUEST": "There is a problem with the request.",
+      "UNAUTHORIZED": "Authentication is required. Please log in.",
+      "FORBIDDEN": "You do not have permission to access this page.",
+      "NOT_FOUND": "The page you are looking for cannot be found.",
+      "METHOD_NOT_ALLOWED": "This operation is not allowed on this page.",
+      "UNPROCESSABLE_ENTITY": "There is a problem with the submitted data.",
+      "INTERNAL_SERVER_ERROR": "An internal server error has occurred.",
+      "UNEXPECTED_ERROR": "An unexpected error has occurred.",
+      "default": "A system error has occurred."
+    }
+  },
+  "settings": {
+    "tabs": {
+      "account": "Account",
+      "security": "Security",
+      "preferences": "Preferences",
+      "language": "Language",
+      "api": "API"
+    },
+    "titles": {
+      "account_settings": "Account Settings",
+      "security_settings": "Security Settings",
+      "preferences_settings": "Preferences",
+      "language_settings": "Language Settings",
+      "api_settings": "API Settings"
+    },
+    "labels": {
+      "name": "Name",
+      "email": "Email Address",
+      "role": "Role",
+      "user_id": "User ID",
+      "current_language": "Current Language",
+      "timezone": "Timezone",
+      "save": "Save",
+      "edit": "Edit",
+      "cancel": "Cancel",
+      "reset": "Reset",
+      "change": "Change",
+      "enable": "Enable",
+      "view": "View"
+    },
+    "api": {
+      "api_key": "API Key",
+      "access_permissions": "Access Permissions",
+      "permissions": {
+        "read": "Read Permission",
+        "write": "Write Permission",
+        "admin": "Admin Permission"
+      },
+      "buttons": {
+        "view": "View",
+        "copy": "Copy",
+        "regenerate": "Regenerate"
+      }
+    },
+    "security": {
+      "password_change": {
+        "title": "Password Change",
+        "description": "We recommend changing your password regularly"
+      },
+      "two_factor": {
+        "title": "Two-Factor Authentication",
+        "description": "Enhance your account security"
+      },
+      "login_history": {
+        "title": "Login History",
+        "description": "View recent login activity"
+      }
+    },
+    "notifications": {
+      "profile_updated": "Profile updated successfully",
+      "save_error": "An error occurred while saving",
+      "name_required": "Please enter a name"
+    },
+    "breadcrumb": {
+      "dashboard": "Dashboard",
+      "settings": "Settings"
+    },
+    "sidebar": {
+      "menu_title": "Settings Menu",
+      "account_settings": "Account Settings",
+      "security_settings": "Security Settings",
+      "preferences_settings": "Preferences",
+      "api_settings": "API Settings"
+    }
+  },
+  "common": {
+    "errors": {
+      "api_error": "An API error occurred",
+      "network_error": "A network error occurred",
+      "unknown_error": "An unknown error occurred"
+    },
+    "loading": {
+      "default": "Loading...",
+      "saving": "Saving...",
+      "deleting": "Deleting...",
+      "uploading": "Uploading..."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "greeting": "Hello, {{name}}",
+    "current_time": "Current Time:",
+    "last_login": "Last Login:",
+    "no_login_record": "No record",
+    "loading": "Loading user information...",
+    "stats": {
+      "user_info": "User Info",
+      "status": "Status",
+      "active": "Active",
+      "session": "Session",
+      "logged_in": "Logged In",
+      "api_access": "API Access",
+      "available": "Available"
+    },
+    "user_card": {
+      "title": "User Information",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "role": "Role",
+        "id": "ID"
+      },
+      "edit_profile": "Edit Profile"
+    },
+    "quick_actions": {
+      "title": "Quick Actions",
+      "api_docs": {
+        "title": "API Documentation",
+        "description": "View API with Swagger UI"
+      },
+      "settings": {
+        "title": "Settings",
+        "description": "Change account settings"
+      },
+      "health_check": {
+        "title": "Health Check",
+        "description": "Check system status"
+      }
+    }
+  },
+  "login": {
+    "title": "Login",
+    "subtitle": "Sign in to your account",
+    "form": {
+      "email": {
+        "label": "Email",
+        "placeholder": "your@email.com"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password"
+      },
+      "submit": "Sign In",
+      "submitting": "Signing In..."
+    },
+    "errors": {
+      "default": "Login failed"
+    },
+    "messages": {
+      "password_reset_success": "Password has been successfully reset. Please log in with your new password.",
+      "invitation_accepted": "Invitation has been accepted. Please log in."
+    },
+    "footer": {
+      "secure_connection": "Protected by secure connection"
+    },
+    "links": {
+      "forgot_password": "Forgot your password?"
+    }
+  },
+  "navbar": {
+    "brand": {
+      "name": "FastAPI App"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "settings": "Settings"
+    },
+    "profile_menu": {
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "errors": {
+      "logout_failed": "Logout failed",
+      "logout_error": "Logout error:"
+    }
+  },
+  "layout": {
+    "footer": {
+      "copyright": "FastAPI App. All rights reserved."
+    }
+  },
+  "language_switcher": {
+    "changing": "Switching...",
+    "loading": "Loading..."
+  },
+  "invite": {
+    "title": "Accept Invitation",
+    "subtitle_valid": "Set your password to activate your account",
+    "subtitle_error": "Please check the invitation information",
+    "invited_user": "Invited User",
+    "email": "Email Address",
+    "expires": "Expires",
+    "expired": "Expired",
+    "expires_in_minutes": "{{minutes}} minutes remaining",
+    "expires_in_hours": "{{hours}} hours remaining",
+    "expires_in_hours_minutes": "{{hours}} hours {{minutes}} minutes remaining",
+    "form": {
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password",
+        "hint": "Please use at least 8 characters with letters and numbers"
+      },
+      "submit": "Activate Account",
+      "submitting": "Processing..."
+    },
+    "help_text": "The invitation link is invalid or has expired. Please ask the inviter to issue a new link.",
+    "back_to_login": "Back to Login",
+    "errors": {
+      "token_not_provided": "Invitation token is not provided.",
+      "invalid_token": "Invalid invitation token.",
+      "verification_failed": "An error occurred while verifying the invitation token.",
+      "accept_failed": "Failed to accept the invitation.",
+      "unexpected_error": "An error occurred"
+    }
+  },
+  "password_reset": {
+    "forgot_password": {
+      "title": "Forgot Your Password?",
+      "subtitle": "Enter your registered email address",
+      "description": "We'll send you a password reset link via email.",
+      "form": {
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email address"
+        },
+        "submit": "Send Reset Email"
+      },
+      "success": "Password reset email has been sent. Please check your email.",
+      "back_to_login": "Back to Login"
+    },
+    "reset_password": {
+      "title": "Reset Password",
+      "subtitle": "Set your new password",
+      "description": "Enter the reset code from your email and your new password.",
+      "form": {
+        "reset_code": {
+          "label": "Reset Code",
+          "placeholder": "6-digit code from email"
+        },
+        "new_password": {
+          "label": "New Password",
+          "placeholder": "Enter new password",
+          "hint": "Must be at least 8 characters"
+        },
+        "confirm_password": {
+          "label": "Confirm Password",
+          "placeholder": "Re-enter password"
+        },
+        "submit": "Reset Password"
+      },
+      "success": "Password has been successfully reset. Please log in with your new password.",
+      "back_to_login": "Back to Login"
+    },
+    "errors": {
+      "email_required": "Email address is required.",
+      "email_invalid": "Please enter a valid email address.",
+      "reset_code_required": "Reset code is required.",
+      "reset_code_invalid": "Reset code is incorrect.",
+      "password_required": "Password is required.",
+      "password_too_short": "Password must be at least 8 characters.",
+      "password_mismatch": "Passwords do not match.",
+      "token_expired": "Reset token has expired.",
+      "token_invalid": "Invalid reset token.",
+      "user_not_found": "User with this email address not found.",
+      "reset_failed": "Password reset failed.",
+      "send_failed": "Failed to send email."
+    }
+  }
+}

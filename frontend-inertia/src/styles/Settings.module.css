@@ -1,0 +1,437 @@
+/* 設定ページ専用CSS Module */
+
+.pageContainer {
+  @apply w-full max-w-none;
+}
+
+.breadcrumb {
+  @apply flex mb-8;
+}
+
+.breadcrumbList {
+  @apply inline-flex items-center space-x-1 md:space-x-3;
+}
+
+.breadcrumbItem {
+  @apply inline-flex items-center;
+}
+
+.breadcrumbLink {
+  @apply inline-flex items-center text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors;
+}
+
+.breadcrumbIcon {
+  @apply w-3 h-3 mr-2.5;
+}
+
+.breadcrumbSeparator {
+  @apply rtl:rotate-180 w-3 h-3 text-gray-400 mx-1;
+}
+
+.breadcrumbCurrent {
+  @apply ml-1 text-sm font-medium text-gray-500 md:ml-2;
+}
+
+.mainLayout {
+  @apply flex flex-col lg:flex-row gap-8;
+}
+
+.sidebar {
+  @apply lg:w-1/4;
+}
+
+.sidebarCard {
+  @apply bg-white shadow rounded-lg p-6;
+}
+
+.sidebarTitle {
+  @apply text-lg font-medium text-gray-900 mb-4;
+}
+
+.sidebarNav {
+  @apply space-y-1;
+}
+
+.navButton {
+  @apply w-full flex items-center px-3 py-2 text-sm font-medium rounded-md border transition-colors;
+}
+
+.navButtonActive {
+  @apply bg-emerald-50 border-emerald-200 text-emerald-700;
+}
+
+.navButtonInactive {
+  @apply border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900;
+}
+
+.navIcon {
+  @apply w-5 h-5 mr-3;
+}
+
+.content {
+  @apply lg:w-3/4;
+}
+
+.contentCard {
+  @apply bg-white shadow rounded-lg;
+}
+
+.contentHeader {
+  @apply px-6 py-4 border-b border-gray-200;
+}
+
+.contentTitle {
+  @apply text-xl font-semibold text-gray-900 flex items-center;
+}
+
+.contentIcon {
+  @apply w-6 h-6 mr-2 text-emerald-600;
+}
+
+.contentBody {
+  @apply p-6;
+}
+
+.form {
+  @apply space-y-6;
+}
+
+.inputGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.inputGroup {
+  /* 個別の入力グループ */
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-emerald-500 focus:border-emerald-500;
+}
+
+.inputReadonly {
+  @apply bg-gray-50 text-gray-500;
+}
+
+.select {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-0 focus:border-emerald-500;
+}
+
+.checkbox {
+  @apply h-4 w-4 text-emerald-600 focus:ring-0 border-gray-300 rounded;
+}
+
+.checkboxLabel {
+  @apply ml-2 block text-sm text-gray-900;
+}
+
+.button {
+  @apply inline-flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors;
+}
+
+.buttonPrimary {
+  @apply border border-transparent text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500;
+}
+
+.buttonSecondary {
+  @apply border border-gray-300 text-gray-700 bg-white hover:bg-gray-50;
+}
+
+.buttonEmerald {
+  @apply border border-emerald-300 text-emerald-700 bg-emerald-50 hover:bg-emerald-100;
+}
+
+.buttonBlue {
+  @apply border border-blue-300 text-blue-700 bg-blue-50 hover:bg-blue-100;
+}
+
+.buttonIcon {
+  @apply w-4 h-4 mr-2;
+}
+
+.alert {
+  @apply rounded-md p-4;
+}
+
+.alertInfo {
+  @apply bg-blue-50 border border-blue-200;
+}
+
+.alertWarning {
+  @apply bg-yellow-50 border border-yellow-200;
+}
+
+.alertIcon {
+  @apply w-5 h-5 mt-0.5 mr-3;
+}
+
+.alertIconInfo {
+  @apply text-blue-400;
+}
+
+.alertIconWarning {
+  @apply text-yellow-400;
+}
+
+.alertText {
+  @apply text-sm;
+}
+
+.alertTextInfo {
+  @apply text-blue-800;
+}
+
+.alertTextWarning {
+  @apply text-yellow-800;
+}
+
+.separator {
+  @apply border-gray-200;
+}
+
+.buttonGroup {
+  @apply flex space-x-4;
+}
+
+.section {
+  @apply space-y-8;
+}
+
+.sectionTitle {
+  @apply text-lg font-medium text-gray-900 mb-2;
+}
+
+.sectionDescription {
+  @apply text-sm text-gray-600 mb-4;
+}
+
+.submitSection {
+  @apply pt-4;
+}
+
+/* フォーム要素 */
+.formGrid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.formLabel {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+
+.formInput {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-0 focus:border-emerald-500;
+}
+
+.formInputReadonly {
+  @apply w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md shadow-sm text-gray-500;
+}
+
+.formInputMono {
+  @apply w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md shadow-sm text-gray-500 font-mono;
+}
+
+.formSelect {
+  @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-white focus:outline-none focus:ring-emerald-500 focus:border-emerald-500;
+}
+
+.editContainer {
+  @apply absolute inset-y-0 right-0 flex items-center pr-3;
+}
+
+.editLink {
+  @apply text-sm text-emerald-600 hover:text-emerald-700 font-medium;
+}
+
+.buttonGroup {
+  @apply flex items-center gap-1.5 mt-4;
+}
+
+.buttonPrimary {
+  @apply px-4 py-2 bg-emerald-600 text-white text-sm font-medium rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200;
+}
+
+.buttonSecondary {
+  @apply px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200;
+}
+
+.buttonWhite {
+  @apply px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500;
+}
+
+.buttonSmall {
+  @apply px-3 py-1 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500;
+}
+
+.buttonDanger {
+  @apply px-3 py-1 bg-red-600 text-white text-sm font-medium rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500;
+}
+
+.roleBadge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800;
+}
+
+.loadingSpinner {
+  @apply animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2 inline-block;
+}
+
+.buttonLoading {
+  @apply cursor-wait;
+}
+
+/* セキュリティ設定項目 */
+.securityItem {
+  @apply flex items-center justify-between p-4 bg-gray-50 rounded-lg;
+}
+
+.securityItemContent {
+  @apply flex-1;
+}
+
+.securityItemTitle {
+  @apply text-sm font-medium text-gray-900;
+}
+
+.securityItemDescription {
+  @apply text-sm text-gray-600 mt-1;
+}
+
+/* API設定 */
+.apiKeyContainer {
+  @apply bg-gray-50 rounded-lg p-4;
+}
+
+.apiKeyTitle {
+  @apply text-sm font-medium text-gray-900 mb-2;
+}
+
+.apiKeyDisplay {
+  @apply font-mono text-sm bg-white border border-gray-200 rounded px-3 py-2 mb-3;
+}
+
+.apiKeyMasked {
+  @apply text-gray-400;
+}
+
+.apiButtonGroup {
+  @apply flex gap-2;
+}
+
+.permissionLabel {
+  @apply block text-sm font-medium text-gray-700 mb-3;
+}
+
+.checkboxGroup {
+  @apply flex items-center;
+}
+
+.checkbox {
+  @apply mr-2 h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded;
+}
+
+.checkboxLabel {
+  @apply text-sm text-gray-700;
+}
+
+.settingsContainer {
+  @apply bg-gray-50 min-h-full -mx-4 sm:-mx-6 lg:-mx-8 -my-8 px-4 sm:px-6 lg:px-8 py-8;
+}
+
+.breadcrumbSeparatorItems {
+  @apply flex items-center;
+}
+
+.buttonGroupPt {
+  @apply flex gap-3 pt-4;
+}
+
+/* セキュリティ設定 */
+.securityForm {
+  @apply space-y-6;
+}
+.securityFormRelative {
+  @apply relative;
+}
+.securitySpaceY {
+  @apply space-y-6;
+}
+.securityItemFlex {
+  @apply flex items-center justify-between p-4 bg-gray-50 rounded-lg;
+}
+.securityItemFlexOne {
+  @apply flex-1;
+}
+.securityItemTitleH4 {
+  @apply text-sm font-medium text-gray-900;
+}
+.securityItemDescriptionP {
+  @apply text-sm text-gray-600 mt-1;
+}
+.securityItemButtonContainer {
+  @apply ml-4;
+}
+
+/* 設定項目 */
+.preferencesForm {
+  @apply space-y-6;
+}
+.preferencesLabel {
+  @apply block text-sm font-medium text-gray-700 mb-2;
+}
+.preferencesSelect {
+  @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-white focus:outline-none focus:ring-0 focus:border-emerald-500;
+}
+.preferencesButtonGroup {
+  @apply flex gap-3 pt-4;
+}
+
+/* API設定 */
+.apiSpaceY {
+  @apply space-y-6;
+}
+.apiKeyContainer {
+  @apply bg-gray-50 rounded-lg p-4;
+}
+.apiKeyTitle {
+  @apply text-sm font-medium text-gray-900 mb-2;
+}
+.apiKeyDisplay {
+  @apply font-mono text-sm bg-white border border-gray-200 rounded px-3 py-2 mb-3;
+}
+.apiKeyMasked {
+  @apply text-gray-400;
+}
+.apiKeyButtonGroup {
+  @apply flex gap-2;
+}
+.apiPermissionLabel {
+  @apply block text-sm font-medium text-gray-700 mb-3;
+}
+.apiPermissionSpaceY {
+  @apply space-y-2;
+}
+.apiPermissionLabelContainer {
+  @apply flex items-center;
+}
+.apiPermissionCheckbox {
+  @apply mr-2 h-4 w-4 text-emerald-600 focus:ring-0 border-gray-300 rounded;
+}
+.apiPermissionSpan {
+  @apply text-sm text-gray-700;
+}
+
+/* 通知 */
+.notificationFixed {
+  @apply fixed top-4 right-4 p-4 rounded-md shadow-lg z-50;
+}
+.notificationSuccess {
+  @apply bg-emerald-600 text-white;
+}
+.notificationError {
+  @apply bg-red-500 text-white;
+}
+.notificationDefault {
+  @apply bg-blue-600 text-white;
+}

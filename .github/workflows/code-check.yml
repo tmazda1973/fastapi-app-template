@@ -1,0 +1,68 @@
+name: Code Quality Check
+
+on:
+  pull_request:
+    branches: [ develop, staging, main ]
+
+env:
+  DOCKER_FILE: deploy/Dockerfile
+
+jobs:
+  lint:
+    name: "Lint Checks"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v4
+
+      - name: "Build container"
+        run: |
+          # Deploy用Dockerfileでビルド
+          DOCKER_BUILDKIT=1 docker build -f ${DOCKER_FILE} -t dev-image:latest .
+          # バックグラウンドでコンテナを起動し、IDを保存する
+          CONTAINER_ID=$(docker run -d -v ${{ github.workspace }}:/workspace --entrypoint tail dev-image:latest -f /dev/null)
+          echo "CONTAINER_ID=$CONTAINER_ID" >> $GITHUB_ENV
+
+      - name: "Install System Dependencies"
+        run: |
+          docker exec --user root ${{ env.CONTAINER_ID }} bash -c "\
+            apt-get update && \
+            apt-get install -y make build-essential libpq-dev pkg-config && \
+            chown -R app:app /workspace"
+
+      - name: "Install Backend Dev Dependencies"
+        run: |
+          docker exec --user app ${{ env.CONTAINER_ID }} bash -c "\
+            cd /workspace && \
+            poetry install --with dev"
+
+      - name: "Install Frontend Dependencies"
+        run: |
+          docker exec --user app ${{ env.CONTAINER_ID }} bash -c "\
+            cd /workspace/frontend-inertia && \
+            npm ci"
+
+      - name: "Run Backend Lint"
+        run: |
+          docker exec --user app ${{ env.CONTAINER_ID }} bash -c "\
+            cd /workspace && \
+            make check-format-be"
+
+      - name: "Run Frontend Lint"
+        run: |
+          docker exec --user app ${{ env.CONTAINER_ID }} bash -c "\
+            cd /workspace && \
+            make check-format-fe"
+
+      - name: "Run Frontend Type Check"
+        run: |
+          docker exec --user app ${{ env.CONTAINER_ID }} bash -c "\
+            cd /workspace/frontend-inertia && \
+            npm run type-check"
+
+      - name: "Clean up"
+        if: always()
+        run: |
+          docker stop ${{ env.CONTAINER_ID }}
+          docker rm ${{ env.CONTAINER_ID }}

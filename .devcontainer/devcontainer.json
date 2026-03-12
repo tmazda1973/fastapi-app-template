@@ -1,0 +1,49 @@
+{
+  "name": "FastAPI App",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/usr/src/app",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [8000, 5432, 1025, 8025],
+  "portsAttributes": {
+    "8000": {
+      "label": "FastAPI App",
+      "onAutoForward": "notify"
+    },
+    "5432": {
+      "label": "PostgreSQL"
+    },
+    "1025": {
+      "label": "Mailhog SMTP"
+    },
+    "8025": {
+      "label": "Mailhog Web UI"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "charliermarsh.ruff",
+        "ms-python.python",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.formatOnSave": true,
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll.ruff": "explicit"
+          }
+        },
+        "ruff.configurationPreference": "filesystemFirst",
+        "ruff.path": ["ruff"],
+        "ruff.interpreter": ["python"],
+        "python.defaultInterpreterPath": "/opt/conda/envs/myenv/bin/python"
+      }
+    }
+  },
+  "postCreateCommand": "echo 'Dev container setup complete!'",
+  "remoteUser": "root"
+}

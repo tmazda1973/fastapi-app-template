@@ -1,0 +1,40 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: fastapi-app
+    volumes:
+      - ./:/usr/src/app/
+      - /usr/src/app/frontend-inertia/node_modules  # Prevent host node_modules from overriding containers
+    ports:
+      - "8000:8000"
+      - "5173:5173"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - APP_ENV=development  # ローカル開発モード
+
+  app-db:
+    image: postgres:17
+    restart: unless-stopped
+    volumes:
+      - app-db-store:/var/lib/postgresql/data
+    container_name: fastapi-app-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+
+  mail-server:
+    image: mailhog/mailhog
+    container_name: fastapi-app-mail-server
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    platform: linux/amd64
+
+volumes:
+  app-db-store:

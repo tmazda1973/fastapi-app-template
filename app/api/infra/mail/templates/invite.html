@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー招待のご案内</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 20px;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .greeting {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .button-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .invite-button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .invite-button:hover {
+            background-color: #1d4ed8;
+        }
+        .info-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .info-box h3 {
+            color: #374151;
+            font-size: 16px;
+            margin: 0 0 10px 0;
+        }
+        .info-box p {
+            color: #6b7280;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            font-size: 12px;
+            color: #6b7280;
+        }
+        .warning {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning p {
+            color: #92400e;
+            font-size: 14px;
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .invite-button {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">{{ app_name or "アプリケーション" }}</div>
+            <h1 class="title">ユーザー招待のご案内</h1>
+        </div>
+
+        <div class="content">
+            <div class="greeting">
+                {{ user_name }} 様
+            </div>
+
+            <div class="message">
+                <p>{{ app_name or "弊社アプリケーション" }}のユーザーとしてご招待いたします。</p>
+                <p>以下のボタンをクリックして、アカウントを有効化してください。</p>
+            </div>
+
+            <div class="button-container">
+                <a href="{{ invite_url }}" class="invite-button">
+                    アカウントを有効化する
+                </a>
+            </div>
+
+            <div class="info-box">
+                <h3>📋 次のステップ</h3>
+                <p>1. 上記のボタンをクリックしてアカウント有効化ページにアクセス</p>
+                <p>2. お好みのパスワードを設定</p>
+                <p>3. アカウント有効化完了後、すぐにご利用いただけます</p>
+            </div>
+
+            <div class="warning">
+                <p>⚠️ この招待リンクの有効期限は {{ expires_in_hours }} 時間です。期限内にアカウントの有効化を完了してください。</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>このメールに心当たりがない場合は、このメールを無視してください。</p>
+            <p>リンクをクリックできない場合は、以下のURLを直接ブラウザにコピー&ペーストしてください：</p>
+            <p style="word-break: break-all; margin-top: 10px; color: #2563eb;">{{ invite_url }}</p>
+            <p style="margin-top: 20px;">© {{ app_name or "アプリケーション" }} - すべての権利を留保</p>
+        </div>
+    </div>
+</body>
+</html>

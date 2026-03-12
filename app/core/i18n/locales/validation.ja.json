@@ -1,0 +1,20 @@
+{
+  "required": "必須項目です",
+  "field_required": "{field}は必須です",
+  "min_length": "{field}は{min}文字以上で入力してください",
+  "max_length": "{field}は{max}文字以内で入力してください",
+  "min_length_simple": "{field}は{min}文字以上である必要があります",
+  "max_length_simple": "{field}は{max}文字以内である必要があります",
+  "pattern": "パスワードは英数字を組み合わせて入力してください",
+  "mismatch": "パスワードが一致しません",
+  "complexity": "パスワードは大文字、小文字、数字を含む必要があります",
+  "invite": {
+    "token_required": "招待トークンは必須です"
+  },
+  "fields": {
+    "name": "名前",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "reset_code": "リセットコード"
+  }
+}
